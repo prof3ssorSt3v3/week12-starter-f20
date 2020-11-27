@@ -29,7 +29,7 @@ const APP = {
     window.addEventListener('hashchange', APP.hashed);
     document.body.addEventListener('click', (ev) => {
       if (ev.target.classList.contains('navlink')) {
-        ev.preventDefault();
+        // ev.preventDefault();
         APP.nav(ev);
       }
     });
