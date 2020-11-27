@@ -8,21 +8,21 @@ const APP = {
   nav(ev) {
     //called when a.navlink is click
     console.log('click event');
-    let hash = new URL(ev.target.href).hash;
-    console.log({ hash });
-    let state = { timmy: Date.now() };
-    let title = null;
-    history.pushState(state, title, hash);
-    APP.switchPage(hash);
+    // let hash = new URL(ev.target.href).hash;
+    // console.log({ hash });
+    // let state = { timmy: Date.now() };
+    // let title = null;
+    // history.pushState(state, title, hash);
+    // APP.switchPage(hash);
   },
   switchPage(hash) {
-    document.querySelector('.active').classList.remove('active');
-    APP.currentPage = hash.replace('#', '');
-    if (!document.getElementById(APP.currentPage)) {
-      APP.currentPage = 'home';
-      history.replaceState({}, null, '#home');
-    }
-    document.getElementById(APP.currentPage).classList.add('active');
+    // document.querySelector('.active').classList.remove('active');
+    // APP.currentPage = hash.replace('#', '');
+    // if (!document.getElementById(APP.currentPage)) {
+    //   APP.currentPage = 'home';
+    //   history.replaceState({}, null, '#home');
+    // }
+    // document.getElementById(APP.currentPage).classList.add('active');
   },
   addListeners() {
     window.addEventListener('popstate', APP.popped);
@@ -43,8 +43,8 @@ const APP = {
     //hashchange event called
     console.log('hashchange event');
     //capture the new hash and call the nav
-    let hash = location.hash.replace('#', '');
-    APP.switchPage(hash);
+    // let hash = location.hash.replace('#', '');
+    // APP.switchPage(hash);
   },
 };
 
