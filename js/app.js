@@ -59,6 +59,8 @@ history.replaceState(state, title, url) - change value in location bar without n
 history.go(-1) - actually navigate through the history array
 history.back() - actually navigate through the history array
 
+NOTE: We can use new URL(str) to turn a string into an object like location
+
 location.href - full url
 location.hash - #fragment-identifier
 location.search - querystring
